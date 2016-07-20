@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System.Drawing;
 using ConfigFromAnywhere.Configuration;
+using ConfigFromAnywhere.Configuration.Speech;
 
 namespace ConfigFromAnywhere
 {
@@ -19,6 +20,7 @@ namespace ConfigFromAnywhere
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddImageFile(null, "config\\config.jpg", "config\\config.jpg.regions", false, true)
+                .AddSpeech("config\\NotFoundMessage.wav", true, true)
                 .AddEnvironmentVariables();
 
             Configuration = builder.Build();

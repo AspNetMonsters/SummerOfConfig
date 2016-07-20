@@ -16,7 +16,7 @@
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
-    "System.Drawing.Primitives": "4.0.0-rc2-24027"
+    "System.Drawing.Primitives": "4.0.0-rc2-24027",
   },
 
   "tools": {
@@ -26,7 +26,11 @@
   },
 
   "frameworks": {
-    "net461": { }
+    "net461": {
+      "frameworkAssemblies": {
+        "System.Speech": "4.0.0.0"
+      }
+    }
   },
 
   "buildOptions": {
